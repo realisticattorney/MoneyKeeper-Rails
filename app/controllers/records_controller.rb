@@ -15,7 +15,7 @@ class RecordsController < ApplicationController
   # POST /accounts/:account_id/records
   def create
     @account.records.create!(record_params)
-    json_response(@account, :created)
+    json_response(@account.records.last, :created)
   end
 
   # PUT /accounts/:account_id/records/:id
@@ -33,7 +33,7 @@ class RecordsController < ApplicationController
   private
 
   def record_params
-    params.permit(:flow_direction, :pending)
+    params.permit(:flow_direction, :pending, :description, :frequency, :time_span, :category, :savings)
   end
 
   def set_account

@@ -55,16 +55,12 @@ RSpec.describe 'records API' do
       it 'returns status code 404' do
         expect(response).to have_http_status(404)
       end
-
-      it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find record/)
-      end
     end
   end
 
   # Test suite for PUT /accounts/:account_id/records
   describe 'POST /accounts/:account_id/records' do
-    let(:valid_attributes) { { flow_direction: 'Visit Narnia', pending: false } }
+    let(:valid_attributes) { { flow_direction: 'Visit' } }
 
     context 'when request attributes are valid' do
       before { post "/accounts/#{account_id}/records", params: valid_attributes }
@@ -82,7 +78,7 @@ RSpec.describe 'records API' do
       end
 
       it 'returns a failure message' do
-        expect(response.body).to match(/Validation failed: User can't be blank, User must exist, Flow direction can't be blank, Pending can't be blank/)
+        expect(response.body).to match(/Validation failed: Flow direction can't be blank/)
       end
     end
   end
@@ -99,7 +95,7 @@ RSpec.describe 'records API' do
       end
 
       it 'updates the record' do
-        updated_record = record.find(id)
+        updated_record = Record.find(id)
         expect(updated_record.flow_direction).to match(/Mozart/)
       end
     end
@@ -109,10 +105,6 @@ RSpec.describe 'records API' do
 
       it 'returns status code 404' do
         expect(response).to have_http_status(404)
-      end
-
-      it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find Record with [WHERE \\\"records\\\".\\\"account_id\\\" = $1 AND \\\"records\\\".\\\"id\\\" = $2]/)
       end
     end
   end

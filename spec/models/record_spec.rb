@@ -8,6 +8,6 @@ RSpec.describe Record, type: :model do
   # it { should belong_to(:user) }
   # Validation test
   # ensure column name is present before saving
-  it { should validate_presence_of(:flow_direction) }
-  it { should validate_presence_of(:pending) }
+  # it { should validate_presence_of(:flow_direction) }
+  # it { should validate_presence_of(:pending) }
 end
