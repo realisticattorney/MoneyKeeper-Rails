@@ -17,7 +17,7 @@ class AccountsController < ApplicationController
     json_response(@account)
   end
 
-  # PUT /accounts/:id
+  # # PUT /accounts/:id
   # def update
   #   @account.update(account_params)
   #   head :no_content
