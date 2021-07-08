@@ -5,7 +5,7 @@ RSpec.describe AuthorizeApiRequest do
   # Create test user
   let(:user) { create(:user) }
   # Mock `Authorization` header
-  let(:header) { { 'Authorization' => token_generator(user.id) } } #user comes from let :user
+  let(:header) { { 'Authorization' => token_generator(user.id) } } # user comes from let :user
   # Invalid request subject
   subject(:invalid_request_obj) { described_class.new({}) }
   # Valid request subject
@@ -21,7 +21,7 @@ RSpec.describe AuthorizeApiRequest do
         expect(result[:user]).to eq(user)
       end
     end
-
+    # rubocop:disable Metrics/BlockLength
     # returns error message when invalid request
     context 'when invalid request' do
       context 'when missing token' do
@@ -30,7 +30,7 @@ RSpec.describe AuthorizeApiRequest do
             .to raise_error(ExceptionHandler::MissingToken, 'Missing token')
         end
       end
-
+      # rubocop:enable Metrics/BlockLength
       context 'when invalid token' do
         subject(:invalid_request_obj) do
           # custom helper method `token_generator`

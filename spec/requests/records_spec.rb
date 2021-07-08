@@ -9,7 +9,7 @@ RSpec.describe 'records API' do
   let(:account_id) { account.id }
   let(:id) { records.first.id }
   let(:headers) { valid_headers }
-  
+
   # Test suite for GET /accounts/:account_id/records
   describe 'GET /accounts/:account_id/records' do
     before { get "/accounts/#{account_id}/records", params: {}, headers: headers }
@@ -74,7 +74,7 @@ RSpec.describe 'records API' do
       end
     end
 
-  context 'when an invalid request' do
+    context 'when an invalid request' do
       before { post "/accounts/#{account_id}/records", params: {}, headers: headers }
 
       it 'returns status code 422' do
@@ -91,7 +91,7 @@ RSpec.describe 'records API' do
   describe 'PUT /accounts/:account_id/records/:id' do
     let(:valid_attributes) { { flow_direction: 'Mozart' }.to_json }
 
-   before do
+    before do
       put "/accounts/#{account_id}/records/#{id}", params: valid_attributes, headers: headers
     end
 

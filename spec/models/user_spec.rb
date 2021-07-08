@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-    # Association test
+  # Association test
   # ensure User model has a 1:m relationship with the Todo model
   it { should have_many(:accounts) }
   # Validation tests

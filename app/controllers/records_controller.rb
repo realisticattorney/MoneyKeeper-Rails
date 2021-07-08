@@ -1,6 +1,6 @@
 class RecordsController < ApplicationController
-    before_action :set_account
-    before_action :set_account_record, only: [:show, :update, :destroy]
+  before_action :set_account
+  before_action :set_account_record, only: %i[show update destroy]
 
   def index
     json_response(@account.records)

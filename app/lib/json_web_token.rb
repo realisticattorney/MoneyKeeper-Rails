@@ -1,5 +1,5 @@
 class JsonWebToken
-  HMAC_SECRET = "12233344445555666666"
+  HMAC_SECRET = '12233344445555666666'.freeze
 
   def self.encode(payload, exp = 24.hours.from_now)
     payload[:exp] = exp.to_i
