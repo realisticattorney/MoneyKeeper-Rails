@@ -1,25 +1,41 @@
-# README
+# Money Keeper - Back End - API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Money Keeper helps you keep track of your finances for free. It offers a personal account to store your data and a straight-to-the-point user interface. Entries are classified as income or expenditures, pending or paid, one-time-only or regular, labels, categories, and more. Keep everything organized so you can easily skim through it later!
 
-Things you may want to cover:
+## Live demo (Frond-End)
 
-* Ruby version
+[live demo](https://moneykeeperreact.herokuapp.com/)
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby
+- Ruby on Rails
+- Lots of gems (for more details see Gemfile in the root folder)
+- Heroku (deployment)
 
-* Database creation
+## Author
 
-* Database initialization
+👤 **German Aquila**
 
-* How to run the test suite
+- GitHub: [@realisticattorney](https://github.com/realisticattorney)
+- Twitter: [@ContoliAxl](https://www.twitter.com/contoliaxl)
+- Linkedin: [@germanaquila](https://www.linkedin.com/in/germanaquila/)
 
-* Services (job queues, cache servers, search engines, etc.)
+## 🤝 Contributing
 
-* Deployment instructions
+Contributions, issues, and feature requests are welcome!
 
-* ...
-# MoneyKeeper-Rails
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- Stackover Flow
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed."# MoneyKeeper"
