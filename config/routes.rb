@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    resources :accounts do
+    resources :accounts, only: [:index, :show, :create, :destroy] do
     resources :records
   end
     post 'auth/login', to: 'authentication#authenticate'
