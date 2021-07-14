@@ -9,6 +9,8 @@
 node_modules/
 node_modules
 /node_modules
+.git/
+vendor/
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
