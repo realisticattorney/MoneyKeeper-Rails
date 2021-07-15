@@ -2,6 +2,7 @@
 FactoryBot.define do
   factory :record do
     flow_direction { Faker::Lorem.word }
+    amount { 500 }
     pending { true }
     savings { false }
     frequency { Faker::Lorem.word }

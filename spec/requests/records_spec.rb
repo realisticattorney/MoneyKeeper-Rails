@@ -62,7 +62,7 @@ RSpec.describe 'records API' do
 
   # Test suite for PUT /accounts/:account_id/records
   describe 'POST /accounts/:account_id/records' do
-    let(:valid_attributes) { { flow_direction: 'Visit' }.to_json }
+    let(:valid_attributes) { { flow_direction: 'Visit', amount: '500' }.to_json }
 
     context 'when request attributes are valid' do
       before do
